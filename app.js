@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}));
 
 
 app.get('/',(req,res)=>{
-    res.render('index')
+    res.render('index.ejs')
 })
 
 app.get('/about',(req,res)=>{
