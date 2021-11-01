@@ -1,18 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path')
-const mongoose = require('mongoose')
-const msg = require('./seeds/msg')
 const nodemailer = require('nodemailer')
 
-
-mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true,useCreateIndex: true,useUnifiedTopology: true})
-    .then(()=>{
-        console.log('db connected')
-    })
-    .catch(()=>{
-        console.log('error')
-    })
 
 
 app.set('view engine', 'ejs')
