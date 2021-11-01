@@ -48,11 +48,9 @@ app.post('/contact',async(req,res)=>{
     
     transporter.sendMail(option,function(err,info){
         if(err){
-            console.log(err)
-            return;
+            res.redirect('/contact')
         }
-        console.log('sent: '+ info.response)    
-        res.redirect('/contact')
+        res.redirect('/')
     })
 })
 
